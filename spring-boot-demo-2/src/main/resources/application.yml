@@ -1,0 +1,22 @@
+# Tomcat configuration
+server:
+  port: 8090
+
+# customer configuration
+content: Nice to meet you, my friend.
+
+
+# 国际化资源所在的目录
+spring:
+  messages:
+    basename: i18n/messages
+  datasource:
+    url: jdbc:mysql://127.0.0.1/bootdb #jdbc:oracle:thin:@192.168.0.51:1521:ORADB
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      default-auto-commit: true
+  jpa:
+    hibernate:
+      ddl-auto: update

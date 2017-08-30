@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Thymeleaf Demo</title>
+</head>
+<body>
+   <!-- <p th:text="${message}"></p>
+
+    <div th:object="${session.user}">
+        <p th:text="*{name}"></p>
+        <p th:text="*{gender}"></p>
+        <p th:text="*{age}"></p>
+    </div>-->
+
+    <!-- 后面2个变量都是不支持的<p th:text="${#ctx.getLocale()}"></p>
+    <p th:text="${#ctx.getVariables()}"></p>-->
+    <!--<p th:text="${#ctx.containsVariable('message')}"></p>-->
+
+    <!--<p th:text="${#locale}"></p>
+    <p th:text="${#locale.country}"></p>
+    <p th:text="${#locale.displayCountry}"></p>
+    <p th:text="${#locale.language}"></p>
+    <p th:text="${#locale.displayLanguage}"></p>
+    <p th:text="${#locale.displayName}"></p>-->
+
+   <!-- <p th:text="${#httpServletRequest.protocol}"></p>
+    <p th:text="${#httpServletRequest.scheme}"></p>
+    <p th:text="${#httpServletRequest.serverName}"></p>
+    <p th:text="${#httpServletRequest.serverPort}"></p>
+    <p th:text="${#httpServletRequest.method}"></p>
+    <p th:text="${#httpServletRequest.requestURI}"></p>
+    <p th:text="${#httpServletRequest.requestURL}"></p>
+    <p th:text="${#httpServletRequest.servletPath}"></p>
+    <p th:text="${#httpServletRequest.parameterNames}"></p>
+    <p th:text="${#httpServletRequest.parameterMap}"></p>
+    <p th:text="${#httpServletRequest.queryString}"></p>-->
+
+    <!--<p th:text="${#response.bufferSize}"></p>
+    <p th:text="${#response.status}"></p>
+    <p th:text="${#response.getCharacterEncoding()}"></p>-->
+
+    <!--<p th:text="${#httpSession.getId()}"></p>
+    <p th:text="${#httpSession.getLastAccessedTime()}"></p>
+    <p th:text="${session.user.name}"></p>-->
+
+    <!--<p th:text="${#strings.isEmpty(message)}"></p>
+    <p th:text="${#dates.format(now, 'yyyyMMddHHmmss')}"></p>-->
+
+   <!-- <p th:text="1024 * 2"></p>
+    <p th:text="1 > 2 ? 'Yes' : 'No'"></p>-->
+
+    <!--<p th:text="|Welcome ${session.user.name} to ${location}|"></p>-->
+    <!--<p th:text="${session.user.age > 40}"></p>-->
+
+    <!--<p th:text="${session.user.name} ?: _">Your name is null</p>-->
+
+    <!--<p th:text="${message}"></p>
+    <p th:utext="${message}"></p>-->
+
+    <!--<a th:href="@{https://www.google.com.hk}">谷歌一下你就知道</a>-->
+    
+    <!--<img src="qie.jpg" th:alt-title="LOGO图片"/>-->
+
+    <!--<button class="btn"></button>-->
+    <!--<input type="checkbox" name="remember" th:checked="${remember}"/> 记住我<br/>
+    <input type="radio" name="sex" value="male"/> 男<br/>
+    <input type="radio" name="sex" value="female" checked/> 女<br/>
+    <input type="text" name="appId" value="9527是你的终身编号" readonly/><br/>
+
+    <select>
+        <option>北京</option>
+        <option>上海</option>
+        <option>广州</option>
+        <option selected>深圳</option>
+    </select>-->
+
+    <!--<div>
+        <span>你所在的城市：</span>
+        <select name="myCity">
+            <option th:each="city : ${cities}" th:text="${city}" th:item-index="citStat.count"></option>
+        </select>
+    </div>-->
+
+    <!--<a th:href="@{/user/order/(uid=${session.user.age})}" th:if="${session.user!=null}">我的订单</a>-->
+    <!--<a th:href="@{/user/order/(uid=${session.user.age})}" th:unless="${session.user != null}">我的订单</a>-->
+
+    <!--<div th:each="city : ${cities}" th:switch="${city}">
+        <p th:case="北京">北京欢迎您</p>
+        <p th:case="上海">上海欢迎您</p>
+        <p th:case="深圳">深圳欢迎您</p>
+        <p th:case="广州">广州欢迎您</p>
+    </div>-->
+
+    <p th:with="name=${session.user.name},age=${session.user.age}">
+        <span th:text="${name}"></span>
+    </p>
+</body>
+</html>
